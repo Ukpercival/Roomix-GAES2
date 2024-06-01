@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roomix | Registrate</title>
+
+  <!--- favicon -->
+  <link rel="shortcut icon" href="./images/Icono.ico" type="image/svg+xml">
+
+  <!--- custom css links -->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./sessions.css">
+
+  <!--- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body id="top">
+
+  <!-- Login & Register form -->
+  <div class="container">
+    <div class="form-container">
+
+      <form id="registerForm">
+
+        <h2>Registrate</h2>
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="apellido" placeholder="Apellido" required>
+        <input type="text" id="documento" placeholder="Documento" required>
+        <input type="email" id="correo" placeholder="Correo" required>
+        <input type="text" id="telefono" placeholder="Teléfono" required>
+        <input type="password" id="contrasena" placeholder="Contraseña" required>
+        <button type="submit">Registrarse</button>
+        <a href="/login">Ir al login</a>
+        <p id="registerError" class="error"></p>
+      </form>
+  </div>
+
+
+  <script src="/sessions/Register.js"></script>
+  
+  <!--- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

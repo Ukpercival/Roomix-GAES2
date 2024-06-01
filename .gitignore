@@ -1,7 +1,16 @@
-index.txt
+# Archivos que no quiero tener control de version
+A tener en cuenta para el proyecto.txt
 
-Logo Roomix.ai
+Estructura del proyecto.txt
 
-Paleta de color.txt
+Guia de desarrollo.txt
 
-./api-v2/node_modules
+node_modules/
+
+docs/
+
+.env
+
+Mockups Gerencias.pdf
+
+Archivos Mockups JK
