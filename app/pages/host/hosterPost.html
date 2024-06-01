@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Habitación</title>
+    <link rel="stylesheet" href="/hoster.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/hosterView">Inventario de Habitaciones</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Publicar Habitación en Alquiler</h1>
+        <form id="rentalForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="locality ">Localidad:</label>
+            <select id="locality" name="localidad" required>
+                <option value="">Selecciona una localidad</option>
+                <option value="suba">Suba</option>
+                <option value="barrios unidos">Barrios Unidos</option>
+                <option value="chapinero">Chapinero</option>
+                <option value="bosa">Bosa</option>
+                <option value="teusaquillo">Teusaquillo</option>
+                <option value="engativa">Engativá</option>
+                <option value="San cristobal">San Cristóbal</option>
+                <option value="usaquen">Usaquén</option>
+                <option value="fontibon">Fontibón</option>
+                <option value="puente aranda">Puente Aranda</option>
+                <option value="kennedy">Kennedy</option>
+                <option value="ciudad bolivar">Ciudad Bolívar</option>
+                <option value="tunjuelito">Tunjuelito</option>
+                <option value="rafael uribe">Rafael Uribe</option>
+                <option value="usme">Usme</option>
+                <option value="martires">Mártires</option>
+                <option value="santa fe">Santa Fe</option>
+            </select>
+            
+            <label for="address">Dirección:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="price">Precio por Noche:</label>
+            <input type="number" id="price" name="price" required>
+
+            <label for="description">Descripción:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <label for="image">Imagen:</label>
+            <input type="file" id="image" name="image" accept="image/*">
+            <img id="imagePreview" src="" alt="Vista previa de la imagen" style="display: none; max-width: 100%; margin-top: 10px;">
+
+            <button type="submit">Publicar</button>
+        </form>
+    </div>
+    <script src="/sessions/hosterPost.js"></script>
+</body>
+</html>
