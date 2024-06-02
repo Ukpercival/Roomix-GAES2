@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p><strong>Correo Electrónico:</strong> ${publication.email}</p>
                 <p><strong>Teléfono:</strong> ${publication.phone}</p>
                 <p><strong>Dirección:</strong> ${publication.address}</p>
-                <p><strong>Precio por Noche:</strong> ${publication.price}</p>
+                <p><strong>Precio por Noche: $</strong>${publication.price}</p>
                 <p><strong>Localidad:</strong> ${publication.locality}</p>
                 <p><strong>Descripción:</strong> ${publication.description}</p>
-                <img src="${publication.image}" alt="Imagen de la habitación" style="max-width: 100%;">
+                <img class="publication-image" src="${publication.image}" alt="Imagen de la habitación" style="max-width: 100%; ">
                 <button class="edit" onclick="editPublication(${index})">Editar</button>
-                <button onclick="deletePublication(${index})">Borrar</button>
+                <button class="edit" onclick="deletePublication(${index})">Borrar</button>
             `;
 
             inventoryDiv.appendChild(publicationDiv);

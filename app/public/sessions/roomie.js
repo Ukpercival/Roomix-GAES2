@@ -1,6 +1,3 @@
-// Eliminar la cookie del token JWT
-document.cookie = 'jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-
 function updatePreview() {
     document.getElementById('previewPlace').textContent = document.getElementById('place').value;
     document.getElementById('previewCheckin').textContent = document.getElementById('checkin').value;
@@ -18,7 +15,7 @@ function submitForm() {
         payment: document.getElementById('payment').value
     };
 
-    fetch('http://localhost:3000/reservations', {
+    fetch('http://localhost:3000/hosterPost', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

@@ -1,9 +1,5 @@
 'use strict';
 
-/**
- * navbar toggle
- */
-
 const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
 const header = document.querySelector("[data-header]");
 
@@ -12,11 +8,6 @@ navToggleBtn.addEventListener("click", function () {
   header.classList.toggle("active");
 });
 
-
-
-/**
- * show go top btn when scroll window to 500px
- */
 
 const goTopBtn = document.querySelector("[data-go-top]");
 

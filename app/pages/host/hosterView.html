@@ -1,21 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventario de Habitaciones</title>
-    <link rel="stylesheet" href="/hoster.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roomix | Tu espacio</title>
+
+  <!--- favicon -->
+  <link rel="shortcut icon" href="../images/Icono.ico" type="image/svg+xml">
+
+  <!--- custom css link -->
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./hoster.css" />
+
+  <!--- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="/hosterPost">Publicar Habitación</a></li>
-        </ul>
-    </nav>
+
+<body id="top">
+
+  <!--- #HEADER -->
+
+  <header class="header" data-header>
     <div class="container">
-        <h1>Inventario de Habitaciones en Alquiler</h1>
-        <div id="inventory"></div>
+      <div class="logo-img"><img src="../images/Isologo.png" alt="Logo Roomix"></div>
+      <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+      </button>
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li><a href="/hosterView" class="navbar-link">Mis publicaciones</a></li>
+          <li><a href="/hosterPost" class="navbar-link">Publicar habitación</a></li>
+        </ul>
+        <button class="logout" id="logoutBtn">Cerrar sesión</button>
+      </nav>
     </div>
-    <script src="/sessions/hosterView.js"></script>
+  </header>
+
+  <main>
+
+    <div class="container-host">
+
+        <h2>Inventario de Habitaciones en Alquiler</h2>
+        <div id="inventory"></div>
+        
+    </div>
+
+  </main>
+
+  <script src="./sessions/hosterView.js"></script>
+  <script src="./sessions/logout.js"></script>
 </body>
 </html>

@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import bcrypt from 'bcryptjs';
 
 const userSchema = new mongoose.Schema({
   nombre: { type: String, required: true },
@@ -11,14 +10,13 @@ const userSchema = new mongoose.Schema({
   rol: { type: String, enum: ['admin', 'roomie', 'host'], default: 'roomie' },
 }, { timestamps: true });
 
-userSchema.pre('save', async function(next) {
-  if (!this.isModified('contrasena')) {
-    return next();
-  }
-  const salt = await bcrypt.genSalt(10);
-  this.contrasena = await bcrypt.hash(this.contrasena, salt);
-  next();
-});
+// Log datos recibidos
+userSchema.methods.toJSON = function() {
+  const user = this.toObject();
+  const { nombre, apellido, documento, correo, telefono, contrasena, rol } = user;
+  console.log('User:', { nombre, apellido, documento, correo, telefono, contrasena, rol });
+  return user;
+};
 
 const User = mongoose.model('User', userSchema);
 

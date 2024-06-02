@@ -1,67 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicar Habitación</title>
-    <link rel="stylesheet" href="/hoster.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roomix | Tu espacio</title>
+
+  <!--- favicon -->
+  <link rel="shortcut icon" href="../images/Icono.ico" type="image/svg+xml">
+
+  <!--- custom css link -->
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./hoster.css" />
+
+  <!--- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="/hosterView">Inventario de Habitaciones</a></li>
-        </ul>
-    </nav>
+
+<body id="top">
+
+  <!--- #HEADER -->
+
+  <header class="header" data-header>
     <div class="container">
-        <h1>Publicar Habitación en Alquiler</h1>
-        <form id="rentalForm">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Teléfono:</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <label for="locality ">Localidad:</label>
-            <select id="locality" name="localidad" required>
-                <option value="">Selecciona una localidad</option>
-                <option value="suba">Suba</option>
-                <option value="barrios unidos">Barrios Unidos</option>
-                <option value="chapinero">Chapinero</option>
-                <option value="bosa">Bosa</option>
-                <option value="teusaquillo">Teusaquillo</option>
-                <option value="engativa">Engativá</option>
-                <option value="San cristobal">San Cristóbal</option>
-                <option value="usaquen">Usaquén</option>
-                <option value="fontibon">Fontibón</option>
-                <option value="puente aranda">Puente Aranda</option>
-                <option value="kennedy">Kennedy</option>
-                <option value="ciudad bolivar">Ciudad Bolívar</option>
-                <option value="tunjuelito">Tunjuelito</option>
-                <option value="rafael uribe">Rafael Uribe</option>
-                <option value="usme">Usme</option>
-                <option value="martires">Mártires</option>
-                <option value="santa fe">Santa Fe</option>
-            </select>
-            
-            <label for="address">Dirección:</label>
-            <input type="text" id="address" name="address" required>
-
-            <label for="price">Precio por Noche:</label>
-            <input type="number" id="price" name="price" required>
-
-            <label for="description">Descripción:</label>
-            <textarea id="description" name="description" rows="4" required></textarea>
-
-            <label for="image">Imagen:</label>
-            <input type="file" id="image" name="image" accept="image/*">
-            <img id="imagePreview" src="" alt="Vista previa de la imagen" style="display: none; max-width: 100%; margin-top: 10px;">
-
-            <button type="submit">Publicar</button>
-        </form>
+      <div class="logo-img"><img src="../images/Isologo.png" alt="Logo Roomix"></div>
+      <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+      </button>
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li><a href="/hosterView" class="navbar-link">Mis publicaciones</a></li>
+          <li><a href="/hosterPost" class="navbar-link">Publicar habitación</a></li>
+        </ul>
+        <button class="logout" id="logoutBtn">Cerrar sesión</button>
+      </nav>
     </div>
-    <script src="/sessions/hosterPost.js"></script>
+  </header>
+
+  <main>
+ 
+    <div class="container-host">
+      <h1>Publica tu habitación</h1>
+
+      <form id="rentalForm">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Teléfono:</label>
+          <input type="tel" id="phone" name="phone" required>
+
+          <label for="locality ">Localidad:</label>
+          <select id="locality" name="localidad" required>
+              <option value="">Selecciona una localidad</option>
+              <option value="suba">Suba</option>
+              <option value="barrios unidos">Barrios Unidos</option>
+              <option value="chapinero">Chapinero</option>
+              <option value="bosa">Bosa</option>
+              <option value="teusaquillo">Teusaquillo</option>
+              <option value="engativa">Engativá</option>
+              <option value="San cristobal">San Cristóbal</option>
+              <option value="usaquen">Usaquén</option>
+              <option value="fontibon">Fontibón</option>
+              <option value="puente aranda">Puente Aranda</option>
+              <option value="kennedy">Kennedy</option>
+              <option value="ciudad bolivar">Ciudad Bolívar</option>
+              <option value="tunjuelito">Tunjuelito</option>
+              <option value="rafael uribe">Rafael Uribe</option>
+              <option value="usme">Usme</option>
+              <option value="martires">Mártires</option>
+              <option value="santa fe">Santa Fe</option>
+          </select>
+          
+          <label for="address">Dirección:</label>
+          <input type="text" id="address" name="address" required>
+
+          <label for="price">Precio por Noche:</label>
+          <input type="number" id="price" name="price" required>
+
+          <label for="description">Descripción:</label>
+          <textarea id="description" name="description" rows="4" required></textarea>
+
+          <label for="image">Imagen:</label>
+          <input type="file" id="image" name="image" accept="image/*" />
+          <img id="imagePreview" src="" alt="Vista previa de la imagen" style="display: none; max-width: 100%; margin-top: 10px;">
+
+          <button type="submit" class="post">Publicar</button>
+      </form>
+  </div>
+
+  </main>
+
+  <script src="./sessions/hosterPost.js"></script>
+  <script src="./sessions/logout.js"></script>
 </body>
 </html>

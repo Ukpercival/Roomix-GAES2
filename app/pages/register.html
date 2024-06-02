@@ -29,9 +29,12 @@
   <div class="container">
     <div class="form-container">
 
+      <h3>¿No estás registrado?</h3>
+      <br>
+
       <form id="registerForm">
 
-        <h2>Registrate</h2>
+        <h2>Ingresa tus datos</h2>
         <input type="text" id="nombre" placeholder="Nombre" required>
         <input type="text" id="apellido" placeholder="Apellido" required>
         <input type="text" id="documento" placeholder="Documento" required>
@@ -39,7 +42,16 @@
         <input type="text" id="telefono" placeholder="Teléfono" required>
         <input type="password" id="contrasena" placeholder="Contraseña" required>
         <button type="submit">Registrarse</button>
-        <a href="/login">Ir al login</a>
+        
+        <hr>
+
+        <h3>¿Ya estás registrado?</h3>
+
+        <div class="btnRedirect">
+          <a href="/login">Login</a>
+          <a href="/inicio">Ir a Inicio</a>
+        </div>
+
         <p id="registerError" class="error"></p>
       </form>
   </div>

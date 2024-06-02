@@ -95,10 +95,46 @@ body {
   }
   
   button:hover {
-    background-color: var(--spanish-gray);
+    background-color: var(--brown);
+    transition: var(--transition-2);
   }
   
   h1 {
     margin-bottom: 20px;
   }
-  
+
+  h3 {
+    padding: 1rem;
+  }
+
+  hr {
+    border-color: 1px #dddddd;
+  }
+
+  .btnRedirect {
+    display: flex;
+    gap: 0;
+  }
+
+  .btnRedirect a {
+    position: relative;
+    width: 30%;
+    padding: 1rem;
+    color: var(--tomato);
+    background-color: var(--maize);
+    font-weight: bolder;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+  }
+
+  .btnRedirect a:hover {
+    background-color: var(--viridian-green);
+    color: var(--white-2);
+    transition: var(--transition-2);
+  }
+
+  .registerError {
+    color: var(--tomato);
+    font-size: 1.2rem;
+  }
