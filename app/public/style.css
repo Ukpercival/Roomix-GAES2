@@ -123,9 +123,6 @@ body {
 ::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 
 
-
-
-
 /*-----------------------------------*\
   #ESTILO REUTILIZABLE
 \*-----------------------------------*/
@@ -136,8 +133,9 @@ body {
   background: var(--background, var(--white-1));
   color: var(--color, var(--viridian-green));
   font-weight: var(--fw-700);
-  width: max-content;
-  padding: 10px 25px;
+  width: fit-content;
+  padding: 1rem 2.5rem;
+  margin: 1rem;
   border: 2px solid var(--border-color, var(--white-1));
   border-radius: var(--radius-6);
 }

@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Publicación actualizada');
                 window.location.href = '/hosterView';
             } else {
-                alert('Debe seleccionar una imagen');
+                alert('Debes seleccionar una imagen');
             }
         }
     });

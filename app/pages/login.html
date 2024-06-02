@@ -36,11 +36,18 @@
 
       <form id="loginForm">
 
-        <h2>Inicia de Sesión</h2>
+        <h2>Inicia Sesión</h2>
         <input type="email" id="loginCorreo" placeholder="Correo" required>
         <input type="password" id="loginContrasena" placeholder="Contraseña" required>
         <button type="submit">Iniciar Sesión</button>
-        <a href="/register">Registrate</a>
+
+        <hr>
+
+        <h3>¿No estás registrado?</h3>
+        <div class="btnRedirect">
+          <a href="/register">Registrate</a>
+          <a href="/inicio">Ir a Inicio</a>
+        </div>
         <p id="loginError" class="error"></p>
       </form>
     </div>

@@ -19,7 +19,18 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
       }
   
       const data = await response.json();
-      window.location.href = '/roomie';
+      const userType = data.userType;
+
+      if (userType === 'admin') {
+        window.location.href = '/admin';
+      } else if (userType === 'roomie') {
+        window.location.href = '/roomieReservs';
+      } else if (userType === 'host') {
+        window.location.href = '/hosterPost';
+      } else {
+        console.log('Tipo de usuario desconocido ', userType);
+      }
+      
     } catch (error) {
       document.getElementById('loginError').innerText = 'Error de conexión';
     }
